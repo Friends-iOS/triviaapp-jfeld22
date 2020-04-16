@@ -9,42 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var progressBar: UIProgressView!
+    
 
+    @IBOutlet var questionLabel: UILabel!
+    
+    var questionNumber : Int = 0
+    
+    var trueFalse : [Bool] = [true]
+    
+    var questions = ["72% of households served by food banks have a median annual household income of $9,175"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // THIS FUNCTION ALWAYS RUNS WHEN THE APP LOADS
-        //VERY SIMILIAR TO SETUP() IN PROCESSING
-        //THIS IS WHERE WE WILL CALL/ACTIVATE OUR CUSTOM FUNCTION, UPDATEUI()
-        //UPDATEUI WILL SETUP EVERYTHING FOR THE REST OF THE CODE TO WORK
+        questionLabel.text = questions[questionNumber]
+        progressBar.setProgress(0.1, animated : false)
+        
+       
     }
     
     //UPDATEUI WILL UPDATE ANY ON SCREEN ELEMENTS AS WELL AS SETUP EVERYTHING FOR OUR FIRST PLAY THROUGH
     @objc func updateUI(){
-        
-        //CLEAR ANY COLOR CHANGES (FOR INSTANCE, IF THE COLOR CHANGES WHEN USER GETS QUESTION RIGHT/WRONG, WE WANT THE COLOR TO CHANGE BACK AFTER THEY ANSWER THE QUESTION
-        
-        //UPDATE THE PROGRESS BAR
-        
-        //UPDATE THE QUESTION THAT APPEARS ON SCREEN
-        
-        //CONDITIONAL THAT WILL CHECK IF THE QUIZ IS OVER. SOME KIND ON SCREEN FEEDBACK SHOULD HAPPEN AT THIS POINT. DISPLAY SCORE, CONGRATULATE THE PLAYER, ETC
-        
-        
-    }
     
-    //IBACTION FUNCTION (TRUE AND FALSE BUTTONS SHOULD BE LINKED TO THIS FUNCTION)
-    
-            //STORE THE CURRENTTITLE OF THE BUTTON IN A VARIABLE
-    
-            //CHECK THE ANSWER USING QUIZBRAIN
-    
-            //CONDITIONAL STATEMENT THAT WILL:
-                //CHANGE THE BUTTONS COLOR DEPENDING IF THEY GOT IT RIGHT OR WRONG
-                //UPDATE THE SCORE VARIABLES
-                //INFORM THE USER IF THEY GOT IT RIGHT OR WRONG
-    
-            //GO TO THE NEXT QUESTION
-
 
 }
+    
+}
+//ack: Brian helped me make the first question.
 
